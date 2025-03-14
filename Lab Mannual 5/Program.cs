@@ -16,7 +16,7 @@ namespace Lab_Mannual_5
                 Console.WriteLine("\t------------------");
                 Console.WriteLine("\t||     MENU     ||");
                 Console.WriteLine("\t------------------");
-                Console.WriteLine("Please Select Option (1-17) or Press 0 to Exit:");
+                Console.WriteLine("Please Select Option (1-5)\n1. Person\n2.Method Person\n3.Copy Constructor Person\n4.Bank Account\n5. Library\nPress 0 to Exit:");
                 int sel;
                 try
                 {
@@ -83,17 +83,17 @@ namespace Lab_Mannual_5
                     case 5:
                         Console.Clear();
                         Console.WriteLine("Option 5 selected.");
-                        
-                        break;
-
-                    case 6:
-                        Console.Clear();
-                        Console.WriteLine("Option 6 selected.");
-                        
+                        LibraryBook book1 = new LibraryBook("OOP", "AQ BILAL", true);
+                        book1.BorrowBook(true);
+                        book1.ReturnBook();
+                        book1.Status();
+                        Console.WriteLine("The Data Of copy Constructor");
+                        LibraryBook book2 = new LibraryBook(book1);
+                        book2.Status();
                         break;
                     default:
                         Console.Clear();
-                        Console.WriteLine("Invalid Input! Please enter a number between 0-17.");
+                        Console.WriteLine("Invalid Input! Please enter a number between 0-5.");
                         break;
                 }
 

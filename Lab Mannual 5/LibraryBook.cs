@@ -24,5 +24,29 @@ namespace Lab_Mannual_5
             this.author = x1.author;
             this.isAvaliabe = x1.isAvaliabe;
         }
+        public void BorrowBook(bool avail)
+        {
+            if (avail == true)
+            {
+                isAvaliabe = false;
+            }
+            else
+            {
+                Console.WriteLine("Book is Not Avaliable");
+            }
+        }
+        public void ReturnBook()
+        {
+            if (isAvaliabe == false)
+            {
+                isAvaliabe = true;
+            }
+        }
+        public void Status()
+        {
+            Console.WriteLine($"The Title of Book is: {title}");
+            Console.WriteLine($"The  Auther of Book is: {author}");
+            Console.WriteLine($"The Availiability of Book is: {isAvaliabe}");
+        }
     }
 }
